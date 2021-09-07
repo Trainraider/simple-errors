@@ -43,7 +43,7 @@ After you've renamed/removed `lib.c` and added new source files, remember to
 update the `library()` call in `meson.build` and add your source files to it.
 
 #### `./include/meson.build`
-Keep `meson.build` here update to date to install all your library headers.
+Keep `meson.build` here up to date to install all your library headers.
 Change or remove the `subdir: 'trainslibs'` field to match the top-level
 `meson.build`.
 
