@@ -6,7 +6,7 @@ and fsanitize to help catch memory bugs and undefined behavior.
 
 ## Getting Started
 You'll need to adjust parts of the build system to get started and as you add
-files.
+files. You might want to remove my weird opinionated subprojects as well.
 
 #### `./meson.build`
 The first place to look is the top-level `meson.build`. You'll want to change
@@ -81,8 +81,8 @@ Runs all unit tests. Run plain `make` if the tests aren't already compiled. You
 can run specific tests or suites by setting a variable called `ARGS` in your
 make command. 
 
-For example to run all O0 unoptimized tests:  
-`make test ARGS="--suite O0"`
+For example to run all tests with the address sanitizer:  
+`make test ARGS="--suite asan"`
 
 Running a single test:  
 `make test ARGS="foo"`  
