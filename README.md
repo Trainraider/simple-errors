@@ -4,6 +4,10 @@ configured to produce both static and dynamic libraries, use werror by default
 for robust code, and generate useful unit tests that run through both Valgrind
 and fsanitize to help catch memory bugs and undefined behavior.
 
+## License
+Although this would appear to be a GPL 2.0 project, it's more of a template for
+GPL 2.0 projects. I hereby release this template in the public domain.
+
 ## Getting Started
 You'll need to adjust parts of the build system to get started and as you add
 files. You might want to remove my weird opinionated subprojects as well.
@@ -11,9 +15,7 @@ files. You might want to remove my weird opinionated subprojects as well.
 #### `./meson.build`
 The first place to look is the top-level `meson.build`. You'll want to change
 the project name from `'template'` and possibly `'c'` to another language, as
-well a adjusting the version field and possibly the license. This is just a
-template, you can change the license. Think of this project as a blank slate
-that happens to come with my license of choice by default.
+well a adjusting the version field and possibly the license.
 
 Anyways, next adjust the email and description fields. Then in the
 `pkg_mod.generate` section you'll want to change the name of the `foo_lib`
