@@ -15,4 +15,14 @@ types_dep = dependency('types', fallback: ['types', 'types_dep'])
 testing_dep = dependency('testing', fallback: ['testing', 'testing_dep'])
 
 subdir('source')
+subdir('include')
 subdir('tests')
+
+pkg_mod = import('pkgconfig')
+pkg_mod.generate(libraries: foo_lib,
+  name: 'lib' + meson.project_name(),
+  version: meson.project_version(),
+  filebase: meson.project_name(),
+  subdirs: 'trainslibs',
+  url: 'https://github.com/Trainraider/meson-lib-template.git',
+  description: description)
