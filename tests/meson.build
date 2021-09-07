@@ -8,7 +8,7 @@ s = '../source/'
 # ['test', ['test.c', s + 'main.c'], [luadep], ['-DTESTING'], [], 
 #                                                            'fakesuite', false]
 
-tests = []
+tests = [['hello', ['say_hello.c'], [types_dep], [], [], 'hello', false]]
 
 # Each list in builds contains a list where the first elements is some c_args and
 # the 2nd is a list of link_args. 3rd element is whether valgrind is

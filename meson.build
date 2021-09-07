@@ -4,9 +4,11 @@ project('template', 'c',
   version : '0.0',
   license : 'GPL-2.0-only',
   default_options : ['warning_level=3',
-                     'werror=true'])
+                     'werror=true',
+                     'default_library=both'])
 email = '<trainraider7@gmail.com>'
 description = 'Prints Hello world'
+
 include = include_directories(['include'])
 
 types_dep = dependency('types', fallback: ['types', 'types_dep'])
