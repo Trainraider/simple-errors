@@ -5,9 +5,9 @@
 #define unlikely(x) __builtin_expect((x), 0)
 
 #define COND_ERROR(X)                                                          \
-        if (unlikely(X))                                                       \
+        if (unlikely((long int)(X)))                                           \
         goto ERROR
 
 #define COND_ERROR_L(X, LABEL)                                                 \
-        if (unlikely(X))                                                       \
+        if (unlikely((long int)(X)))                                           \
         goto LABEL
