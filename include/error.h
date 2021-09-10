@@ -8,3 +8,6 @@
         if (unlikely(X))                                                       \
         goto ERROR
 
+#define COND_ERROR_L(X, LABEL)                                                 \
+        if (unlikely(X))                                                       \
+        goto LABEL
