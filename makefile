@@ -41,7 +41,6 @@ clean-full:
 	$(RM) -r build
 	$(RM) -r release
 	$(RM) -r asan
-	$(RM) -r subprojects/testing
 	$(RM) -r subprojects/types
 
 build:
