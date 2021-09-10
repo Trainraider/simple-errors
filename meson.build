@@ -13,6 +13,7 @@ description = 'Just simple error handling'
 include = include_directories(['include'])
 
 subdir('include')
+simple_errors_dep = declare_dependency(include_directories: include)
 
 pkg_mod = import('pkgconfig')
 pkg_mod.generate(
