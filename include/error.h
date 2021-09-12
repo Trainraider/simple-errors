@@ -21,6 +21,7 @@
         goto LABEL
 
 static void eprinterr(int errnum, char * fmt, ...){
+        fputs("Error: ", stderr);
         fputs(strerror(errnum), stderr);
         fputs(": ", stderr);
         va_list args;
