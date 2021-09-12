@@ -12,6 +12,9 @@ description = 'Just simple error handling'
 
 include = include_directories(['include'])
 
+types_dep = dependency('types', fallback : ['types', 'types_dep'])
+
+subdir('tests')
 subdir('include')
 simple_errors_dep = declare_dependency(include_directories: include)
 
